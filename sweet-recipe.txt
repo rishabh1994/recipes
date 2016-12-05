@@ -1,0 +1,46 @@
+
+git commit function creates a snapshot of all the existing files.
+
+git log tells us history of all our commits.
+
+git diff ---- ---- where dash represent commit ids of any 2 commit from our history, tells us the differnce between the 2 commits.
+
+git checkout ---- where dash represent commit id, make us reach to that commit. git show warning of detached head. say before writing this command when we type git log there are commit history lik A,B,C, D. now we type git checkout C. then we write git log. we dont see A,B.
+
+Git command review
+Compare two commits, printing each line that is present in one commit but not the other.
+
+git diff will do this. It takes two arguments - the two commit ids to compare. 
+
+
+Make a copy of an entire Git repository, including the history, onto your own computer.
+
+git clone will do this. It takes one argument - the url of the repository to copy. 
+
+
+Temporarily reset all files in a directory to their state at the time of a specific commit.
+
+git checkout will do this. It takes one argument - the commit ID to restore. 
+
+
+Show the commits made in this repository, starting with the most recent.
+
+git log will do this. It doesn't take any arguments.
+
+That is because git diff considers the first argument as the "original", and the second argument as the "new" version, so additions are lines present in the second argument but not the first.
+
+If you accidentally add a file to the staging area, you can remove it using git reset. For example, if you accidentally add lesson_2_reflections.txt, but don’t want it to be committed yet, run git reset lesson_2_reflections.txt and the file will be removed from the staging area, but it will still be in your working directory.
+
+
+&&&
+git diff tells difference between current repository that we are and the staging reposityor. By deafult, staging repository, contain content of most recent commig. git diff --staged tells difference between most recent commit and the staging area.
+
+git reset --hard discard any changed in working directory or staign area. IRREVERSIBLE CHANGE. BE CAREFUL.
+
+&&&
+
+git branch lists all the branch in the current repo.
+git branch ----- where dash represent branch name, creates a new branch with name as ----.
+
+git show "commit id" shows difference of a  commit as compared to its parent.
+git branch -d coins delete the branch coings. this dont delete the commits in the branch, but just the label.
